@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+class ProfileCard extends StatelessWidget {
+  const ProfileCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        elevation: 6,
+        margin: const EdgeInsets.all(24),
+        child: const Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CircleAvatar(
+                radius: 40,
+                backgroundImage: AssetImage('assets/images/profile.png'), 
+              ),
+              SizedBox(height: 12),
+              Text(
+                'Mufti Arifudin Taqy',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Flutter Developer',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                ),
+              ),
+              SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.email, size: 18),
+                  SizedBox(width: 6),
+                  Text('muftiarifudintaqy0@gmail.com'),
+                ],
+              ),
+              SizedBox(height: 8),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.phone, size: 18),
+                  SizedBox(width: 6),
+                  Text('+62 857 1106 5619'),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
